@@ -11,42 +11,64 @@ body {
 }
 
 h1 {
-  font-size: 7rem;
-  text-align: center;
-}
-
-h2 {
   font-size: 3rem;
 }
-
-h3 {
-  font-size: 1.5rem;
+h2 {
+  font-size: 1.7rem;
+  padding-left: 25px;
 }
-
+h3 {
+  font-size: 1rem;
+}
 p {
   font-size: 0.5rem;
 }
+li {
+  list-style: none;
+  margin: 30px auto;
+}
+a {
+  font-size: 1.5rem;
+}
+li a {
+  font-size: 1.5rem;
+}
 
+span {
+  color: rgb(121, 17, 17);
+}
 a {
   text-decoration: none;
   color: black;
 }
 
-li a {
-  font-size: 3rem;
-}
-li {
-  list-style: none;
-}
-span {
-  color: rgb(121, 17, 17);
-}
+@media (min-width: 799px) {
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
 
-li:hover {
-  scale: 110%;
-}
-li a:hover {
-  color: rgba(71, 68, 68, 0.989);
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+  li a {
+    font-size: 2rem;
+  }
+  li {
+    margin: 40px;
+  }
+
+  li a:hover {
+    color: rgba(85, 82, 82, 0.989);
+  }
 }
 
 /* generel */
@@ -58,4 +80,29 @@ li a:hover {
 .forside_nav {
   text-align: center;
   padding-top: 50px;
+}
+
+.katagorier {
+  display: block;
+  margin: 20px;
+  padding: 40px;
+  background-color: grey;
+  text-align: center;
+  border-radius: 30px;
+  border: 1px solid white;
+}
+
+@media (min-width: 799px) {
+  .katagorier_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .katagorier {
+    max-width: 600px;
+    padding: 60px 0;
+  }
+  .katagorier:hover {
+    background-color: white;
+    opacity: 70%;
+  }
 }
