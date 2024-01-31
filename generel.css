@@ -93,9 +93,13 @@ a {
 }
 
 @media (min-width: 799px) {
+  body {
+    margin: 0 60px;
+  }
+
   .katagorier_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .katagorier {
     max-width: 600px;
