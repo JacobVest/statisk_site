@@ -15,16 +15,20 @@ img {
 body {
   background-color: rgb(235, 229, 219);
 }
+header {
+  border-bottom: 1px black solid;
+}
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 h2 {
-  font-size: 1.7rem;
-  padding-left: 25px;
+  font-size: 1.5rem;
+  text-align: center;
   color: rgb(0, 0, 0);
   font-family: monospace;
 }
+
 h3 {
   font-size: 1.3rem;
   color: rgb(1, 1, 1);
@@ -49,10 +53,7 @@ a {
   font-size: 1.5rem;
   color: rgb(0, 0, 0);
 }
-.moreInfo {
-  font-size: 1.1rem;
-  font-family: monospace;
-}
+
 li a {
   font-size: 1.5rem;
   color: rgb(0, 0, 0);
@@ -65,6 +66,41 @@ span {
 article {
   border-bottom: rgb(42, 40, 40) solid 1px;
   padding: 10px;
+}
+
+.linje {
+  border-bottom: 3px black solid;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.itemProduct a {
+  text-decoration: none;
+}
+
+.main_nav a,
+.forside_nav a,
+.katagorier {
+  text-decoration: none;
+}
+
+.main_nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.main_nav a {
+  font-size: 1rem;
+  padding: 30px;
+}
+
+.moreInfo {
+  font-size: 1.1rem;
+  font-family: monospace;
+  background-color: grey;
+  max-width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .typeProduct {
@@ -80,14 +116,55 @@ article {
   padding: 15px;
 }
 
+.size_container {
+  margin: 50px 10px;
+}
+
+.padding_price {
+  padding: 20px 20px;
+}
+
+.padding_price p {
+  padding: 15px 0;
+}
+
+.container_flex {
+  padding-bottom: 20px;
+}
+
+.container_flex a {
+  font-size: 1rem;
+  border: solid black 1px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+}
+
+.basket_button {
+  background-color: black;
+  color: white;
+  max-width: fit-content;
+  padding: 15px;
+}
+
+.basket_button:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
 @media (min-width: 799px) {
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.3rem;
+    font-style: italic;
   }
 
   h3 {
@@ -95,11 +172,15 @@ article {
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   li a {
     font-size: 2rem;
   }
+  .main_nav a {
+    font-size: 1.3rem;
+  }
+
   li {
     margin: 40px;
   }
@@ -111,10 +192,6 @@ article {
 
 /* generel */
 
-.main_nav {
-  padding: 50px;
-}
-
 .forside_nav {
   text-align: center;
   padding-top: 50px;
@@ -122,11 +199,13 @@ article {
 
 .katagorier {
   display: block;
-  margin: 20px;
+  margin: 30px auto;
   padding: 40px;
-  background-color: grey;
+  width: 350px;
+  height: 350px;
+  background-color: rgb(215, 106, 22);
   text-align: center;
-  border-radius: 30px;
+  border-radius: 50%;
   border: 1px solid white;
 }
 
@@ -150,12 +229,81 @@ article {
   font-size: 1.2rem;
   font-family: monospace;
 }
-.soldOut img {
-  opacity: 0.7;
+.itemProduct img:hover {
+  opacity: 0.6;
 }
+
+.grid_product {
+  margin: 5px;
+}
+
+.size_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.size_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.color_shirt {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.color_flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.red_shirt {
+  display: block;
+  width: 20px;
+  height: auto;
+  padding: 1px;
+  border-radius: 15px;
+  background-color: rgb(180, 35, 35);
+  color: rgb(180, 35, 35);
+  margin: 2px;
+}
+
+.blue_shirt {
+  display: block;
+  width: 20px;
+  height: auto;
+  padding: 1px;
+  border-radius: 15px;
+  background-color: rgb(31, 44, 189);
+  color: rgb(31, 44, 189);
+  margin: 2px;
+}
+
+.yellow_shirt {
+  display: block;
+  width: 20px;
+  height: auto;
+  padding: 1px;
+  border-radius: 15px;
+  background-color: rgb(236, 236, 94);
+  color: rgb(236, 236, 94);
+  margin: 2px;
+}
+
 @media (min-width: 799px) {
-  body {
-    margin: 0 60px;
+  .main_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* position: sticky;
+    top: 0; */
   }
 
   .katagorier_grid {
@@ -167,7 +315,6 @@ article {
     padding: 60px 0;
   }
   .katagorier:hover {
-    background-color: white;
     opacity: 70%;
   }
 
@@ -179,5 +326,19 @@ article {
 
   .produktliste h2 {
     grid-column: 1/-1;
+  }
+
+  .grid_product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+  }
+
+  .img_wrapper {
+    margin: 10px;
+  }
+
+  .productInfo_right {
+    margin: 10px;
   }
 }
