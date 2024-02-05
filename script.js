@@ -1,39 +1,39 @@
 window.addEventListener("DOMContentLoaded", init);
 
-const beerURL = "https://api.punkapi.com/v2/beers";
+const apparelURL = "https://api.punkapi.com/v2/beers";
 
-let beerTemplate;
-let beerContainer;
+let apparelTemplate;
+let apparelContainer;
 
 function init() {
   console.log("init");
 
-  beerTemplate = document.querySelector(".beer_template");
-  console.log(".beer_template", beerTemplate);
+  apparelTemplate = document.querySelector(".apparel_template");
+  console.log(".apparel_template", apparelTemplate);
 
-  beerContainer = document.querySelector(".beer_container");
-  console.log(".beer_container", beerContainer);
+  apparelContainer = document.querySelector(".apparel_container");
+  console.log(".apparel_container", apparelContainer);
 
-  fetch(beerURL)
+  fetch(apparelURL)
     .then(function (response) {
       return response.json();
     })
     .then(function (json) {
-      showBeers(json);
+      showApparel(json);
     });
 }
 
-function showBeers(beerJSON) {
-  let beerClone;
+function showApparel(apparelJSON) {
+  let apparelClone;
 
-  beerJSON.forEach((beer) => {
-    let beerClone = beerTemplate.cloneNode(true).content;
-    console.log("Beer", beer);
-    beerClone.querySelector(".beer_image").src = beer.image_url;
-    beerClone.querySelector(".beer_image").alt = beer.image_url;
-    beerClone.querySelector(".beer_name").textContent = beer.name;
-    beerClone.querySelector(".beer_tagline").textContent = beer.tagline;
-    beerClone.querySelector(".beer_description").textContent = beer.description;
-    beerContainer.appendChild(beerClone);
+  apparelJSON.forEach((apparel) => {
+    let apparelClone = apparelTemplate.cloneNode(true).content;
+    console.log("apparel", apparel);
+    apparelClone.querySelector(".apparel_image").src = apparel.image_url;
+    apparelClone.querySelector(".apparel_image").alt = apparel.image_url;
+    apparelClone.querySelector(".apparel_name").textContent = apparel.name;
+    apparelClone.querySelector(".apparel_tagline span").textContent = apparel.price;
+    apparelClone.querySelector(".apparel_description").textContent = apparel.description;
+    apparelContainer.appendChild(apparelClone);
   });
 }

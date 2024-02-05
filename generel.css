@@ -192,6 +192,36 @@ article {
 
 /* generel */
 
+/* test */
+.apparel_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.apparel_container article {
+  background-color: rgb(85, 85, 221);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.apparel_image_container {
+  background-color: rgb(231, 158, 24);
+  max-width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.apparel_image {
+  max-width: 100%;
+  height: 250px;
+}
+/* test */
+
 .forside_nav {
   text-align: center;
   padding-top: 50px;
