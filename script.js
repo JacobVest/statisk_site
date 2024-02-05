@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", init);
 
-const apparelURL = "https://api.punkapi.com/v2/beers";
+const apparelURL = "https://kea-alt-del.dk/t7/api/products";
 
 let apparelTemplate;
 let apparelContainer;
@@ -28,12 +28,13 @@ function showApparel(apparelJSON) {
 
   apparelJSON.forEach((apparel) => {
     let apparelClone = apparelTemplate.cloneNode(true).content;
-    console.log("apparel", apparel);
-    apparelClone.querySelector(".apparel_image").src = apparel.image_url;
-    apparelClone.querySelector(".apparel_image").alt = apparel.image_url;
-    apparelClone.querySelector(".apparel_name").textContent = apparel.name;
-    apparelClone.querySelector(".apparel_tagline span").textContent = apparel.price;
-    apparelClone.querySelector(".apparel_description").textContent = apparel.description;
+    console.log(apparelClone);
+
+    apparelClone.querySelector(".apparel_image").src = `https://kea-alt-del.dk/t7/images/webp/640/${apparel.id}.webp`;
+    apparelClone.querySelector(".apparel_image").alt = apparel.productdisplayname;
+    apparelClone.querySelector(".apparel_displayname").textContent = apparel.productdisplayname;
+    apparelClone.querySelector(".apparel_price span").textContent = apparel.price;
+    apparelClone.querySelector(".apparel_brandname").textContent = apparel.brandname;
     apparelContainer.appendChild(apparelClone);
   });
 }
