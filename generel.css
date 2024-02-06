@@ -13,10 +13,14 @@ img {
 /* fonts og styling */
 
 body {
-  background-color: rgb(235, 229, 219);
+  background-color: rgb(224, 223, 223);
 }
 header {
   border-bottom: 1px black solid;
+}
+
+.apparel_image {
+  max-width: 700px;
 }
 
 h1 {
@@ -25,12 +29,12 @@ h1 {
 h2 {
   font-size: 1.5rem;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(121, 17, 17);
   font-family: monospace;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: rgb(1, 1, 1);
   margin-bottom: 30px;
   margin-top: 3px;
@@ -38,7 +42,7 @@ h3 {
   font-weight: 600;
 }
 p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: rgb(4, 4, 4);
   padding: 5px 0;
   text-transform: capitalize;
@@ -73,10 +77,6 @@ article {
   margin-top: 60px;
   text-align: center;
   padding-bottom: 5px;
-}
-
-.itemProduct a {
-  text-decoration: none;
 }
 
 .main_nav a,
@@ -159,17 +159,17 @@ article {
 
 @media (min-width: 799px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
   h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-style: italic;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   p {
@@ -189,6 +189,10 @@ article {
   li a:hover {
     color: rgba(85, 82, 82, 0.989);
   }
+
+  .apparel_article:hover {
+    opacity: 70%;
+  }
 }
 
 /* generel */
@@ -196,21 +200,23 @@ article {
 /* test */
 .apparel_container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
-  margin: 5px 0;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 }
 
 .apparel_container article {
-  background-color: rgb(235, 229, 219);
+  background-color: rgb(255, 255, 255);
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  box-shadow: black 5px 5px 10px 10px;
+  border: 1px black solid;
+  gap: 5px;
 }
 .apparel_link {
   text-decoration: none;
+}
+
+.apparel_brandname {
+  opacity: 50%;
 }
 
 .apparel_image_container {
@@ -219,11 +225,13 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 20px;
 }
 
 .apparel_image {
+  display: block;
   max-width: 100%;
-  height: 250px;
+  height: 270px;
 }
 /* test */
 
@@ -244,12 +252,6 @@ article {
   border: 1px solid white;
 }
 
-.itemProduct {
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-}
-
 .discount {
   display: flex;
   justify-content: space-between;
@@ -263,9 +265,6 @@ article {
   padding: 25px;
   font-size: 1.2rem;
   font-family: monospace;
-}
-.itemProduct img:hover {
-  opacity: 0.6;
 }
 
 .grid_product {
