@@ -103,14 +103,18 @@
 
 </html>
 <template class="apparel_template">
-    <a class="apparel_link" href="produkt.html">
-        <article class="apparel_article">
-            <div class="apparel_image_container">
-                <img class="apparel_image" />
-            </div>
-            <h3 class="apparel_displayname">Name</h3>
-            <p class="apparel_price">Price: <span></span>DKK,-</p>
-            <p class="apparel_brandname"></p>
-        </article>
-    </a>
+    <article class="apparel_article">
+        <div class="apparel_image_container">
+            <img class="apparel_image" />
+        </div>
+        <div class="udsolgt hide">udsolgt</div>
+        <div class="udsalg hide">
+            <p class="udsalg_p">-<span class="discount"></span>%</p>
+        </div>
+
+        <h3 class="apparel_displayname">Name</h3>
+        <p class="apparel_price">Price: <span></span>DKK,-</p>
+        <p class="apparel_brandname"></p>
+    </article>
+    <!-- <a class="apparel_link" href="produkt.html"> </a> -->
 </template>

@@ -233,6 +233,31 @@ article {
   max-width: 100%;
   height: 270px;
 }
+
+.hide {
+  display: none;
+}
+
+.udsalg_p {
+  display: flex;
+  flex-direction: row;
+}
+
+.udsalg {
+  background-color: red;
+  width: 100px;
+  padding: 10px;
+}
+
+.udsolgt {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+  opacity: 0.5;
+  width: 100%;
+}
+
 /* test */
 
 .forside_nav {

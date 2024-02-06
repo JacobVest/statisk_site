@@ -32,9 +32,37 @@ function showApparel(apparelJSON) {
 
     apparelClone.querySelector(".apparel_image").src = `https://kea-alt-del.dk/t7/images/webp/640/${apparel.id}.webp`;
     apparelClone.querySelector(".apparel_image").alt = apparel.productdisplayname;
+    // apparelClone.querySelector(".apparel_link").href = `apparel.html?id=${apparel.id}`;
+
     apparelClone.querySelector(".apparel_displayname").textContent = apparel.productdisplayname;
     apparelClone.querySelector(".apparel_price span").textContent = apparel.price;
+    apparelClone.querySelector(".discount").textContent = apparel.discount;
+
     apparelClone.querySelector(".apparel_brandname").textContent = apparel.brandname;
+
+    console.log("apparel.discount", apparel.discount);
+
+    if (apparel.discount) {
+      apparelClone.querySelector(".udsalg").classList.remove("hide");
+    }
+
+    if (apparel.soldout) {
+      apparelClone.querySelector(".udsolgt").classList.remove("hide");
+    }
     apparelContainer.appendChild(apparelClone);
   });
 }
+
+// "id": 2283,
+// "gender": "Men",
+// "category": "Apparel",
+// "subcategory": "Topwear",
+// "articletype": "Tshirts",
+// "season": "Spring",
+// "productionyear": 2014,
+// "usagetype": "Sports",
+// "productdisplayname": "Poly Black T-shirt",
+// "price": 1095,
+// "discount": 34,
+// "brandname": "Nike",
+// "soldout": 0
